@@ -1,1 +1,180 @@
-*{margin:0;padding:0;box-sizing:border-box}body{background-color:#f0f0f0;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}.container{display:flex;width:100vw;height:100vh;background-color:#fff;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.1);overflow:hidden}.code-container{flex:2;padding:20px;background-color:#f9f9f9;overflow-y:auto;height:100%}.output-container{flex:1;padding:20px;background-color:#f2f2f2;overflow-y:auto}textarea{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;resize:none}h1{font-size:24px;margin-bottom:15px}h2{font-size:18px;margin-bottom:10px}#runButton{display:block;margin-top:15px;padding:10px 15px;background-color:#007bff;color:#fff;border:none;border-radius:4px;cursor:pointer;transition:background-color .3s ease}#runButton:hover{background-color:#0056b3}#input{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;background-color:#f9f9f9;overflow-y:auto;height:40vh}#output{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;background-color:#f9f9f9;overflow-y:auto;height:40vh}#code{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;background-color:#f9f9f9;overflow-y:auto;height:75vh}.auth-form-container{display:flex;justify-content:space-around;margin-top:50px}.auth-form{background-color:#fff;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.1);padding:20px;width:300px}.auth-form h2{font-size:20px;margin-bottom:15px}.auth-form input{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;font-size:14px}.auth-form button{width:100%;padding:10px;background-color:#007bff;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer;transition:background-color .3s ease}.auth-form button:hover{background-color:#0056b3}.auth-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);justify-content:center;align-items:center;z-index:1000}.auth-form-container{display:flex;justify-content:center;align-items:center}.auth-form{background-color:#fff;padding:20px;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.1);text-align:center;width:300px;max-width:90%}.auth-form h2{font-size:20px;margin-bottom:15px}.auth-form input{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;font-size:14px}.auth-form button{display:block;width:100%;padding:10px 15px;background-color:#007bff;color:#fff;border:none;border-radius:4px;cursor:pointer;transition:background-color .3s ease;font-size:14px}.auth-form button:hover{background-color:#0056b3}.auth-buttons{position:absolute;top:20px;right:20px}.auth-buttons button{padding:5px 10px;background-color:#007bff;color:#fff;border:none;border-radius:4px;cursor:pointer;transition:background-color .3s ease;font-size:14px}.auth-buttons button:hover{background-color:#0056b3}#runButton[disabled]{cursor:default}#runButton[disabled]:hover{background-color:initial;color:initial}#runButton:hover:not([disabled]){background-color:#0056b3}#runButton[disabled]{cursor:default;opacity:.6}#runButton[disabled]:hover{background-color:#0056b3;color:#fff;opacity:.6}.auth-buttons{display:flex;justify-content:space-between}.left-button{margin-right:5px}.right-button{margin-left:5px}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.code-container,
+.output-container {
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.code-container {
+  flex: 2;
+  background-color: #f9f9f9;
+}
+
+.output-container {
+  flex: 1;
+  background-color: #f2f2f2;
+}
+
+textarea,
+#input,
+#output,
+#code {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#runButton {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#runButton:hover:not([disabled]) {
+  background-color: #0056b3;
+}
+
+#input,
+#output {
+  height: 40vh;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+#code {
+  height: 80vh;
+}
+
+.auth-form-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.auth-form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.auth-form h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.auth-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.auth-buttons button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3;
+}
+
+#runButton[disabled],
+#runButton[disabled]:hover {
+  cursor: default;
+  opacity: 0.6;
+  background-color: #0056b3;
+  color: #fff;
+}

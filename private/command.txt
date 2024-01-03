@@ -1,4 +1,0 @@
-1. for css ->  cleancss private/styles.css -o public/styles.css
-2. for html->  html-minifier private/index.html -o public/index.html --collapse-whitespace --remove-comments --remove-redundant-attributes
-3. for script-> uglifyjs private/script.js -o public/script.js -c -m
-4. for script-> terser private/script.js -o public/script.js --compress --mangle
